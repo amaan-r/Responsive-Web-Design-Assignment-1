@@ -1,0 +1,1285 @@
+@media (min-width:1024px) { /*Desktop Resolution*/
+
+    html,
+    body {
+        overscroll-behavior: none;
+        -webkit-overflow-scrolling: touch; /* using overscroll-behavior property to prevent scroll chaining on desktop while keeping it as a feature on  mobile and tablet for refreshing pages*/
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        display: grid; /*using a single grid for the whole web page with sub-grids for each elemental division*/
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 0.01fr 1fr 1fr repeat(3, 0.5fr);
+        background-color: #231651
+    }
+
+    /*Header*/
+    .header { 
+        grid-area: 1/1/2/4; /*first said sub-grid*/
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr 2fr;
+        grid-template-rows: 1fr;
+        background-color: #070410;
+        color: #ffffff;
+        justify-items: center;
+        justify-content: center;
+        gap: 16px;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    .header h1 {
+        font-size: 3em;
+        margin: 16px;
+        font-family: "Teko";
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        justify-self: flex-start;
+    }
+
+    .header h2 {
+        font-size: 2em;
+        align-self: center;
+        gap: 48px;
+        font-family: "Teko";
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    .header button {
+        display: flex;
+        height: 3.5rem;
+        background-color: #ffffff;
+        border-radius: 16px;
+        align-items: center;
+        align-self: center;
+        justify-self: flex-end;
+        margin-right: 16px;
+    }
+
+    .header button h1 {
+        font-family: "Teko";
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 2em;
+        color: #070410;
+    }
+
+    
+    /*Barbie*/
+    .main_content {
+        grid-area: 2/1/3/4;
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 900px;
+        width: 48rem;
+        height: 80%;
+        background-color: #070410;
+        align-self: center;
+        justify-self: center;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    .main_content img {
+        width: 47%;
+        height: 100%;
+        aspect-ratio: 1/1;
+        grid-row: 1/2;
+        grid-column: 1/3;
+        justify-self: center;
+        border: 0.1px solid #ffffff;
+    }
+
+
+    .main_content p {
+        color: #ffffff;
+        grid-row: 2/3;
+        grid-column: 1/2;
+        font-size: 1.5em;
+        aspect-ratio: 1/1;
+        width: 85%;
+        height: 80%;
+        margin-left: 16px;
+        align-content: center;
+        justify-self: center;
+        font-family: "Lato", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    .main_content button {
+        grid-row: 2/3;
+        grid-column: 2/3;
+        width: 80%;
+        height: 60%;
+        aspect-ratio: 1/1;
+        background-color: #070410;
+        border: solid 2px #ffffff;
+        border-radius: 16px;
+        justify-self: center;
+        align-self: center;
+    }
+
+    .main_content button h1 {
+        color: #ffffff;
+        font-size: 2em;
+        font-family: "Teko";
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    .main_content button h1::before {
+        content: "Watch\ANow"; /* I used \A styling property instead of <br> tag to control the line break of text without making changes in html */
+        white-space: pre;
+    }
+
+     
+    /*La La Land*/
+    .second_movie {
+        grid-area: 3/1/4/2;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 1.5fr 0.3fr;
+        width: 22vw;
+        height: 95%;
+        margin-right: 2.7vw;
+        justify-self: end;
+        align-self: end;
+        background-color: #070410;
+        border: 3px solid #070410;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    .second_movie img {
+        width: 100%;
+        grid-row: 1/2;
+        border: 1px solid #ffffff;
+    }
+
+    .second_movie p {
+        color: #ffffff;
+        grid-row: 2/3;
+        font-size: 1.5em;
+        justify-self: left;
+        font-family: "Lato", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        margin: 16px;
+        aspect-ratio: 1/1;
+    }
+
+    .second_movie button {
+        grid-row: 3/4;
+        width: 90%;
+        height: 100%;
+        background-color: #070410;
+        border: solid 2px #ffffff;
+        border-radius: 16px;
+        justify-self: center;
+        align-self: center;
+
+    }
+
+    .second_movie button h1 {
+        color: #ffffff;
+        font-size: 2em;
+        font-family: "Teko";
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        margin: auto auto;
+    }
+
+    .second_movie button h1::before {
+        content: "Watch Now";
+        white-space: pre;
+    }
+
+
+     /*Hidden Figures*/
+    .third_movie {
+        grid-area: 3/2/4/3;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 1.5fr 0.3fr;
+        width: 22vw;
+        height: 95%;
+        margin-left: 2.7vw;
+        justify-self: start;
+        align-self: end;
+        background-color: #070410;
+        border: 3px solid #070410;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    .third_movie img {
+        width: 100%;
+        grid-row: 1/2;
+        border: 1px solid #ffffff;
+    }
+
+    .third_movie p {
+        color: #ffffff;
+        grid-row: 2/3;
+        font-size: 1.5em;
+        justify-self: left;
+        font-family: "Lato", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        margin: 16px;
+        aspect-ratio: 1/1;
+    }
+
+    .third_movie button {
+        grid-row: 3/4;
+        width: 90%;
+        height: 100%;
+        background-color: #070410;
+        border: solid 2px #ffffff;
+        border-radius: 16px;
+        justify-self: center;
+        align-self: center;
+    }
+
+    .third_movie button h1 {
+        color: #ffffff;
+        font-size: 2em;
+        font-family: "Teko";
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        margin: auto auto;
+    }
+
+    .third_movie button h1::before {
+        content: "Watch Now";
+        white-space: pre;
+    }
+
+
+     /*Hook*/
+    .fourth_movie {
+        grid-area: 4/1/5/3;
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        width: 50vw;
+        height: 58%;
+        background-color: #070410;
+        align-self: end;
+        justify-self: center;
+        border: 3px solid #070410;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    .fourth_movie img {
+        width: 100%;
+        grid-area: 1/1/3/2;
+        border: 1px solid #ffffff;
+        align-self: top;
+    }
+
+    .fourth_movie p {
+        color: #ffffff;
+        grid-area: 1/2/2/3;
+        font-size: 1.5em;
+        font-family: "Lato", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-top: 0;
+        aspect-ratio: 3.5 / 3;
+    }
+
+    .fourth_movie button {
+        grid-area: 2/2/3/3;
+        width: 90%;
+        height: 100%;
+        background-color: #070410;
+        border: solid 2px #ffffff;
+        border-radius: 16px;
+        justify-self: center;
+        align-self: end;
+        aspect-ratio: 6/1;
+    }
+
+    .fourth_movie button h1 {
+        color: #ffffff;
+        font-size: 2em;
+        font-family: "Teko";
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        margin: auto auto;
+    }
+
+    .fourth_movie button h1::before {
+        content: "Watch Now";
+        white-space: pre;
+    }
+
+
+     /*Who Framed Roger Rabbit*/
+    .fifth_movie {
+        grid-area: 5/1/6/3;
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        width: 50vw;
+        height: 58%;
+        background-color: #070410;
+        align-self: center;
+        justify-self: center;
+        border: 3px solid #070410;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    .fifth_movie img {
+        width: 100%;
+        grid-area: 1/1/3/2;
+        border: 1px solid #ffffff;
+        align-self: top;
+    }
+
+    .fifth_movie p {
+        color: #ffffff;
+        grid-area: 1/2/2/3;
+        font-size: 1.5em;
+        font-family: "Lato", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-top: 0;
+        aspect-ratio: 4.6/ 4;
+    }
+
+    .fifth_movie button {
+        grid-area: 2/2/3/3;
+        width: 90%;
+        height: 100%;
+        background-color: #070410;
+        border: solid 2px #ffffff;
+        border-radius: 16px;
+        justify-self: center;
+        align-self: end;
+        aspect-ratio: 6/1;
+    }
+
+    .fifth_movie button h1 {
+        color: #ffffff;
+        font-size: 2em;
+        font-family: "Teko";
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        margin: auto auto;
+    }
+
+    .fifth_movie button h1::before {
+        content: "Watch Now";
+        white-space: pre;
+    }
+
+
+     /*Palm Springs*/
+    .sixth_movie {
+        grid-area: 6/1/7/3;
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        width: 50vw;
+        height: 81%;
+        background-color: #070410;
+        align-self: top;
+        justify-self: center;
+        border: 3px solid #070410;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    .sixth_movie img {
+        width: 100%;
+        grid-area: 1/1/3/2;
+        border: 1px solid #ffffff;
+        align-self: top;
+    }
+
+    .sixth_movie p {
+        color: #ffffff;
+        grid-area: 1/2/2/3;
+        font-size: 1.5em;
+        font-family: "Lato", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-top: 0;
+        aspect-ratio: 2/1;
+    }
+
+    .sixth_movie button {
+        grid-area: 2/2/3/3;
+        width: 90%;
+        height: 35%;
+        background-color: #070410;
+        border: solid 2px #ffffff;
+        border-radius: 16px;
+        justify-self: center;
+        align-self: end;
+        aspect-ratio: 2/1;
+    }
+
+    .sixth_movie button h1 {
+        color: #ffffff;
+        font-size: 2em;
+        font-family: "Teko";
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        margin: auto auto;
+    }
+
+    .sixth_movie button h1::before {
+        content: "Watch Now";
+        white-space: pre;
+    }
+}
+
+@media (min-width:720px) and (max-width:1024px) { /*Tablet Resolution*/
+
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 0.01fr 0.1fr 0.6fr 0.5fr;
+        background-color: #231651
+    }
+
+    .header {
+        max-width: 100%;
+        grid-area: 1/1/2/4;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr 2fr;
+        grid-template-rows: 1fr;
+        background-color: #070410;
+        color: #ffffff;
+        justify-items: center;
+        justify-content: center;
+        gap: 16px;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    .header h1 {
+        font-size: 3em;
+        margin: 16px;
+        font-family: "Teko";
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        justify-self: flex-start;
+    }
+
+    .header h2 {
+        font-size: 2em;
+        align-self: center;
+        gap: 48px;
+        font-family: "Teko";
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+    }
+
+    .header button {
+        display: flex;
+        height: 3.5rem;
+        background-color: #ffffff;
+        border-radius: 16px;
+        align-items: center;
+        align-self: center;
+        justify-self: flex-end;
+        margin-right: 16px;
+    }
+
+    .header button h1 {
+
+        font-family: "Teko";
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 2em;
+        color: #070410;
+    }
+
+    .main_content {
+        grid-area: 2/1/3/2;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 75vw 1fr;
+        width: 30vw;
+        height: 90%;
+        max-width: 100%;
+        margin-left: 32px;
+        justify-self: center;
+        align-self: center;
+        background-color: #070410;
+        border: 3px solid #070410;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    .main_content img {
+        width: 100%;
+        grid-row: 1/2;
+        border: 1px solid #ffffff;
+    }
+
+
+    .main_content p {
+        color: #ffffff;
+        grid-row: 2/3;
+        font-size: 1.5em;
+        align-self: top;
+        font-family: "Lato", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        margin: 16px;
+    }
+
+    .main_content button {
+        grid-row: 3/4;
+        width: 90%;
+        height: 75%;
+        background-color: #070410;
+        border: solid 2px #ffffff;
+        border-radius: 16px;
+        justify-self: center;
+        align-self: center;
+    }
+
+    .main_content button h1 {
+        color: #ffffff;
+        font-size: 2em;
+        font-family: "Teko";
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        margin: auto auto;
+    }
+
+    .main_content button h1::before {
+        content: "Watch\ANow";
+        white-space: pre;
+    }
+
+
+
+    .second_movie {
+        max-width: 100%;
+        grid-area: 2/2/3/3;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 75vw 1fr;
+        width: 30vw;
+        height: 90%;
+        margin-right: 32px;
+        justify-self: center;
+        align-self: center;
+        background-color: #070410;
+        border: 3px solid #070410;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    .second_movie img {
+        width: 100%;
+        grid-row: 1/2;
+        border: 1px solid #ffffff;
+    }
+
+    .second_movie p {
+        color: #ffffff;
+        grid-row: 2/3;
+        font-size: 1.5em;
+        align-self: top;
+        font-family: "Lato", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        margin: 16px;
+    }
+
+    .second_movie button {
+        grid-row: 3/4;
+        width: 90%;
+        height: 75%;
+        background-color: #070410;
+        border: solid 2px #ffffff;
+        border-radius: 16px;
+        justify-self: center;
+        align-self: center;
+    }
+
+    .second_movie button h1 {
+        color: #ffffff;
+        font-size: 2em;
+        font-family: "Teko";
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        margin: auto auto;
+    }
+
+    .second_movie button h1::before {
+        content: "Watch\ANow";
+        white-space: pre;
+    }
+
+    .third_movie {
+        max-width: 100%;
+        grid-area: 3/1/4/2;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 75vw 1fr;
+        width: 30vw;
+        height: 90%;
+        margin-left: 32px;
+        justify-self: center;
+        align-self: center;
+        background-color: #070410;
+        border: 3px solid #070410;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    .third_movie img {
+        width: 100%;
+        grid-row: 1/2;
+        border: 1px solid #ffffff;
+    }
+
+    .third_movie p {
+        color: #ffffff;
+        grid-row: 2/3;
+        font-size: 1.5em;
+        align-self: top;
+        font-family: "Lato", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        margin: 16px;
+    }
+
+    .third_movie button {
+        grid-row: 3/4;
+        width: 90%;
+        height: 75%;
+        background-color: #070410;
+        border: solid 2px #ffffff;
+        border-radius: 16px;
+        justify-self: center;
+        align-self: center;
+    }
+
+    .third_movie button h1 {
+        color: #ffffff;
+        font-size: 2em;
+        font-family: "Teko";
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        margin: auto auto;
+    }
+
+    .third_movie button h1::before {
+        content: "Watch\ANow";
+        white-space: pre;
+    }
+
+    .fourth_movie {
+        max-width: 100%;
+        grid-area: 3/2/4/3;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 75vw 1fr;
+        width: 30vw;
+        height: 90%;
+        margin-right: 32px;
+        justify-self: center;
+        align-self: center;
+        background-color: #070410;
+        border: 3px solid #070410;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    .fourth_movie img {
+        width: 100%;
+        grid-row: 1/2;
+        border: 1px solid #ffffff;
+    }
+
+    .fourth_movie p {
+        color: #ffffff;
+        grid-row: 2/3;
+        font-size: 1.5em;
+        align-self: top;
+        font-family: "Lato", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        margin: 16px;
+
+    }
+
+    .fourth_movie button {
+        grid-row: 3/4;
+        width: 90%;
+        height: 75%;
+        background-color: #070410;
+        border: solid 2px #ffffff;
+        border-radius: 16px;
+        justify-self: center;
+        align-self: center;
+    }
+
+    .fourth_movie button h1 {
+        color: #ffffff;
+        font-size: 2em;
+        font-family: "Teko";
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        margin: auto auto;
+    }
+
+    .fourth_movie button h1::before {
+        content: "Watch\ANow";
+        white-space: pre;
+    }
+
+
+    .fifth_movie {
+        max-width: 100%;
+        grid-area: 4/1/5/2;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 75vw 1fr;
+        width: 30vw;
+        height: 90%;
+        margin-left: 32px;
+        justify-self: center;
+        align-self: center;
+        background-color: #070410;
+        border: 3px solid #070410;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    .fifth_movie img {
+        width: 100%;
+        grid-row: 1/2;
+        border: 1px solid #ffffff;
+    }
+
+    .fifth_movie p {
+        color: #ffffff;
+        grid-row: 2/3;
+        font-size: 1.5em;
+        align-self: top;
+        font-family: "Lato", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        margin: 16px;
+
+    }
+
+    .fifth_movie button {
+        grid-row: 3/4;
+        width: 90%;
+        height: 75%;
+        background-color: #070410;
+        border: solid 2px #ffffff;
+        border-radius: 16px;
+        justify-self: center;
+        align-self: center;
+    }
+
+    .fifth_movie button h1 {
+        color: #ffffff;
+        font-size: 2em;
+        font-family: "Teko";
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        margin: auto auto;
+    }
+
+    .fifth_movie button h1::before {
+        content: "Watch\ANow";
+        white-space: pre;
+    }
+
+    .sixth_movie {
+        max-width: 100%;
+        grid-area: 4/2/5/3;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 75vw 1fr;
+        width: 30vw;
+        height: 90%;
+        margin-right: 32px;
+        justify-self: center;
+        align-self: center;
+        background-color: #070410;
+        border: 3px solid #070410;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    .sixth_movie img {
+        width: 100%;
+        grid-row: 1/2;
+        border: 1px solid #ffffff;
+    }
+
+    .sixth_movie p {
+        color: #ffffff;
+        grid-row: 2/3;
+        font-size: 1.5em;
+        align-self: top;
+        font-family: "Lato", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        margin: 16px;
+    }
+
+    .sixth_movie button {
+        grid-row: 3/4;
+        width: 90%;
+        height: 75%;
+        background-color: #070410;
+        border: solid 2px #ffffff;
+        border-radius: 16px;
+        justify-self: center;
+        align-self: center;
+    }
+
+    .sixth_movie button h1 {
+        color: #ffffff;
+        font-size: 2em;
+        font-family: "Teko";
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        margin: auto auto;
+    }
+
+    .sixth_movie button h1::before {
+        content: "Watch\ANow";
+        white-space: pre;
+    }
+}
+
+@media (min-width:360px) and (max-width:720px) { /*Mobile Resolution*/
+
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.01fr repeat(5, 0.08fr);
+        background-color: #231651
+    }
+
+    .header {
+        max-width: 100%;
+        grid-area: 1/1/2/4;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        background-color: #070410;
+        color: #ffffff;
+        justify-items: center;
+        justify-content: center;
+
+    }
+
+    .header h1 {
+        font-size: 2em;
+        margin: 16px;
+        font-family: "Teko";
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        align-self: center;
+        justify-self: baseline;
+    }
+
+    .header h2 {
+        display: none;
+    }
+
+    .header button {
+        background-color: #ffffff;
+        border-radius: 16px;
+        height: 14vw;
+        width: 30vw;
+        align-self: center;
+        justify-self: end;
+        margin: 16px;
+    }
+
+    .header button h1 {
+        font-family: "Teko";
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 2em;
+        color: #070410;
+        margin: 0 0;
+    }
+
+    .main_content {
+        grid-area: 2/1/3/2;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 0.8fr 0.5fr;
+        width: 100vw;
+        height: 90%;
+        align-self: center;
+        background-color: #070410;
+    }
+
+    .main_content img {
+        width: 100%;
+        grid-row: 1/2;
+        border: 1px solid #ffffff;
+    }
+
+
+    .main_content p {
+        color: #ffffff;
+        grid-row: 2/3;
+        font-size: 1.5em;
+        align-self: top;
+        font-family: "Lato", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        margin: 16px;
+        aspect-ratio: 1 / 1;
+    }
+
+    .main_content button {
+        grid-row: 3/4;
+        width: 85vw;
+        height: 80%;
+        background-color: #070410;
+        border: solid 2px #ffffff;
+        border-radius: 16px;
+        justify-self: center;
+        aspect-ratio: 3 / 1;
+    }
+
+    .main_content button h1 {
+        color: #ffffff;
+        font-size: 2em;
+        font-family: "Teko";
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        margin: auto auto;
+    }
+
+    .main_content button h1::before {
+        content: "Watch Now";
+        white-space: pre;
+    }
+
+
+    .second_movie {
+        max-width: 100%;
+        grid-area: 3/1/4/2;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 0.8fr 0.5fr;
+        width: 100vw;
+        height: 90%;
+        align-self: center;
+        background-color: #070410;
+    }
+
+    .second_movie img {
+        width: 100%;
+        grid-row: 1/2;
+        border: 1px solid #ffffff;
+    }
+
+    .second_movie p {
+        color: #ffffff;
+        grid-row: 2/3;
+        font-size: 1.5em;
+        align-self: top;
+        font-family: "Lato", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        margin: 16px;
+        aspect-ratio: 1 / 1;
+    }
+
+    .second_movie button {
+        grid-row: 3/4;
+        width: 85vw;
+        height: 80%;
+        background-color: #070410;
+        border: solid 2px #ffffff;
+        border-radius: 16px;
+        justify-self: center;
+        aspect-ratio: 3 / 1;
+    }
+
+    .second_movie button h1 {
+        color: #ffffff;
+        font-size: 2em;
+        font-family: "Teko";
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        margin: auto auto;
+    }
+
+    .second_movie button h1::before {
+        content: "Watch Now";
+        white-space: pre;
+    }
+
+    .third_movie {
+        max-width: 100%;
+        grid-area: 4/1/5/2;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 0.8fr 0.5fr;
+        width: 100vw;
+        height: 90%;
+        align-self: center;
+        background-color: #070410;
+    }
+
+    .third_movie img {
+        width: 100%;
+        grid-row: 1/2;
+        border: 1px solid #ffffff;
+    }
+
+    .third_movie p {
+        color: #ffffff;
+        grid-row: 2/3;
+        font-size: 1.5em;
+        align-self: top;
+        font-family: "Lato", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        margin: 16px;
+        aspect-ratio: 1 / 1;
+    }
+
+    .third_movie button {
+        grid-row: 3/4;
+        width: 85vw;
+        height: 80%;
+        background-color: #070410;
+        border: solid 2px #ffffff;
+        border-radius: 16px;
+        justify-self: center;
+        aspect-ratio: 3 / 1;
+    }
+
+    .third_movie button h1 {
+        color: #ffffff;
+        font-size: 2em;
+        font-family: "Teko";
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        margin: auto auto;
+    }
+
+    .third_movie button h1::before {
+        content: "Watch Now";
+        white-space: pre;
+    }
+
+    .fourth_movie {
+        max-width: 100%;
+        grid-area: 5/1/6/2;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 0.8fr 0.5fr;
+        width: 100vw;
+        height: 90%;
+        align-self: center;
+        background-color: #070410;
+    }
+
+    .fourth_movie img {
+        width: 100%;
+        grid-row: 1/2;
+        border: 1px solid #ffffff;
+    }
+
+    .fourth_movie p {
+        color: #ffffff;
+        grid-row: 2/3;
+        font-size: 1.5em;
+        align-self: top;
+        font-family: "Lato", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        margin: 16px;
+        aspect-ratio: 1 / 1;
+    }
+
+    .fourth_movie button {
+        grid-row: 3/4;
+        width: 85vw;
+        height: 80%;
+        background-color: #070410;
+        border: solid 2px #ffffff;
+        border-radius: 16px;
+        justify-self: center;
+        aspect-ratio: 3 / 1;
+    }
+
+    .fourth_movie button h1 {
+        color: #ffffff;
+        font-size: 2em;
+        font-family: "Teko";
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        margin: auto auto;
+    }
+
+    .fourth_movie button h1::before {
+        content: "Watch Now";
+        white-space: pre;
+    }
+
+    .fifth_movie {
+        max-width: 100%;
+        grid-area: 6/1/7/2;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 0.8fr 0.5fr;
+        width: 100vw;
+        height: 90%;
+        align-self: center;
+        background-color: #070410;
+    }
+
+    .fifth_movie img {
+        width: 100%;
+        grid-row: 1/2;
+        border: 1px solid #ffffff;
+    }
+
+    .fifth_movie p {
+        color: #ffffff;
+        grid-row: 2/3;
+        font-size: 1.5em;
+        align-self: top;
+        font-family: "Lato", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        margin: 16px;
+        aspect-ratio: 1 / 1;
+    }
+
+    .fifth_movie button {
+        grid-row: 3/4;
+        width: 85vw;
+        height: 80%;
+        background-color: #070410;
+        border: solid 2px #ffffff;
+        border-radius: 16px;
+        justify-self: center;
+        aspect-ratio: 3 / 1;
+    }
+
+    .fifth_movie button h1 {
+        color: #ffffff;
+        font-size: 2em;
+        font-family: "Teko";
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        margin: auto auto;
+    }
+
+    .fifth_movie button h1::before {
+        content: "Watch Now";
+        white-space: pre;
+    }
+
+    .sixth_movie {
+        max-width: 100%;
+        grid-area: 7/1/8/2;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 0.7fr 0.5fr;
+        width: 100vw;
+        height: 90%;
+        align-self: center;
+        background-color: #070410;
+    }
+
+    .sixth_movie img {
+        width: 100%;
+        grid-row: 1/2;
+        border: 1px solid #ffffff;
+    }
+
+    .sixth_movie p {
+        color: #ffffff;
+        grid-row: 2/3;
+        font-size: 1.5em;
+        align-self: top;
+        font-family: "Lato", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        margin: 16px;
+        aspect-ratio: 1 / 1;
+    }
+
+    .sixth_movie button {
+        grid-row: 3/4;
+        width: 85vw;
+        height: 80%;
+        background-color: #070410;
+        border: solid 2px #ffffff;
+        border-radius: 16px;
+        justify-self: center;
+        aspect-ratio: 3 / 1;
+    }
+
+    .sixth_movie button h1 {
+        color: #ffffff;
+        font-size: 2em;
+        font-family: "Teko";
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        margin: auto auto;
+    }
+
+    .sixth_movie button h1::before {
+        content: "Watch Now";
+        white-space: pre;
+    }
+}
